@@ -1,4 +1,4 @@
 shape="octagon"
 sides=8
 angle=360/sides
-print(angle)
+print("Internal angle:",angle)
