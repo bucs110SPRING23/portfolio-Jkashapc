@@ -1,0 +1,5 @@
+rate=input("What is the euro to dollar exchnage rate?:")
+amount=input("How much would you like to convert?:")
+rate=float(rate)
+amount=float(amount)
+print(rate*amount)
