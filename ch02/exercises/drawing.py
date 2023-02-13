@@ -10,5 +10,3 @@ for i in sides
 tur.down
 tur.forward(length)
 tur.right(angle)
-
-
