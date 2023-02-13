@@ -1,12 +1,23 @@
 import turtle 
-sides=input("How many sides does your desired shape have?:")
-length=input("What should the length of each side be?:")
-float(sides)
-angle=360/sides
-tur=turtle()
+
+sides=int(input("How many sides does your desired shape have?:"))
+length=int(input("What should the length of each side be?:"))
+
+
+tur=turtle.Turtle()
 tur.color('blue')
 tur.shape('turtle')
-for i in sides
+window=turtle.Screen()
+
+for s in sides
 tur.down
 tur.forward(length)
-tur.right(angle)
+tur.right(360/sides)
+
+
+
+
+
+window.exitonclick
+
+
