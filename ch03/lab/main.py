@@ -17,21 +17,24 @@ mic.up()
 don.goto(-100,20)
 mic.goto(-100,-20)
 
-## 5. Your PART A code goes here
-#don.down()
-#mic.down()
-#don.forward(randrange(1,100))
-#mic.forward(randrange(1,100))
-#don.up()
-#mic.up()
-#don.goto(-100,20)
-#mic.goto(-100,-20)
+# 5. Your PART A code goes here
+don.down()
+mic.down()
+don.forward(randrange(1,100))
+mic.forward(randrange(1,100))
+don.up()
+mic.up()
+don.goto(-100,20)
+mic.goto(-100,-20)
 
-for i in randrange(1,10):
-    don.forward(randrange(1,100))
-    mic.forward(randrange(1,100))
+for _ in range(0,10):
+     don.forward(randrange(1,10))
+     mic.forward(randrange(1,10))
+don.goto(-100,20)
+mic.goto(-100,-20)
 
 
+window.exitonclick()
 
 # PART B - complete part B here
 import pygame
@@ -39,9 +42,31 @@ import math
 
 pygame.init()
 screen=pygame.display.set_mode()
-screen.fill("green")
+# screen.fill("green")
 pygame.display.flip()
-pygame.draw.polygon(screen, "red", [[100,100],[0,200],[200,200]],25)
+xpos = 100
+ypos = 100
+side_length = 40
 
 
-window.exitonclick()
+for num_sides in [3,4,6,20,100,360]:
+    points =[]
+    for i in range(num_sides):
+        angle = 360/num_sides
+        radians = math.radians(angle*i)
+        x = xpos + side_length * math.cos(radians)
+        y = ypos +side_length * math.sin(radians)
+        points.append((x, y))
+    pygame.draw.polygon(screen, 'green', points )
+    pygame.display.flip()
+    pygame.time.wait(3000)
+    screen.fill('black')
+    pygame.display.flip()
+
+
+
+  
+
+
+
+
