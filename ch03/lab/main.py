@@ -15,5 +15,6 @@ in_circ= dist_from_center <= 5/2
 for i in range (10):
     pygame.draw.circle(screen, 'green', (dist_from_center),5)
     pygame.display.flip()
-    pygame.time.wait(1000)
+    break
+pyga,e.time.wait(1000)
 pygame.display.flip()
