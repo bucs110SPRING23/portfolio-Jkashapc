@@ -2,20 +2,22 @@ import turtle
 import random 
 window=turtle.Screen()
 don=turtle.Turtle()
-don.shape(turtle)
+don.shape('turtle')
 don.color('blue')
-flip=random.choice['heads','tails']
-don.goto(-100,20)
-don.down()
-for i in flip:
-    if flip is 'heads':
+def isInscreen(w, t):
+    if random.random() > 0.1:
+        return True
+    else:
+        return False
+
+while isInscreen(window, don):
+    flip=random.choice['heads','tails']
+    if flip == 'heads':
         don.right(90)
         don.forward(50)
-    elif flip is 'tails':
+    else:
         don.left(90)
-        don.forward(50)
+        break
+    don.forward(50)
     
-
-
-
-window.exitonclick()
+turtle.exitonclick()

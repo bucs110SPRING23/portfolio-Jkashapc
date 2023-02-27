@@ -2,7 +2,7 @@ import random
 num=random.randrange(1,1000)
 guess=int(input("Guess the number we are thinking:"))
 count=0
-for i in range(1000):
+while True:
     if guess > num:
         print("Too high bozo")
         guess=int(input("Guess the number again you bum:"))
