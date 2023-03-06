@@ -16,5 +16,13 @@ for _ in range (3):
     c=int(input(":"))
     findmax()
 
+def foo(var):
+    var+=1
+    print(var)
+
+var=5
+foo(var)
+print(var)
+
 
 
