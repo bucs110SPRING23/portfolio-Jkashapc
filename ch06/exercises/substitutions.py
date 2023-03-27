@@ -9,10 +9,10 @@ def main():
         if ch.isalnum():
             accumulator+=1
     fptr.close()
-    fptr=open("news.text", "w")
+    fptr=open(news, "w")
     data=str(accumulator)+"characters"
     fptr.write()
-fptr= open("news.txt", "r")
+fptr= open(news.txt, "r")
 json_data=json.load(fptr)
 fptr2= open("subs.json", "r")
 better=fptr.read()
@@ -21,4 +21,4 @@ for k, v in json_data.items():
 fptr= open("betternews.txt", "w")
 fptr.write(better)
 fptr.close()
-
+main()
