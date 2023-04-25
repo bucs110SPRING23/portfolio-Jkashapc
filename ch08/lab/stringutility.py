@@ -10,7 +10,7 @@ class StringUtilty:
         else:
             return str(count)
     def bothEnds(self):
-        if len(self.str)<=2:
+        if len(self.string)<=2:
             return ""
         else:
             return self.string[-2:]+self.string[:2]
