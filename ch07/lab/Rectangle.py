@@ -5,4 +5,4 @@ class Rectangle():
         self.length=1
         self.width=w
     def _str_(self):
-        return f"Rectangle(width=(self.width), length=(self.length))"
+        return f"Rectangle(width={self.width}, length={self.length})"
